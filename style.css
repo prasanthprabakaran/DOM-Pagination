@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 1.5;
+}
+.heading{
+    text-align: center;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.container{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 70%;
+}
+
+.table{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    border-width: 10px;
+}
+.thead-dark{
+    background-color: #343A40;
+}
+th{
+    padding: 12px;
+}
+td{
+    padding: 12px;
+}
