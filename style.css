@@ -1,35 +1,86 @@
-body{
-    margin: 0;
+body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    line-height: 1.5;
+    margin-top: 10%;
 }
+
 .heading{
     text-align: center;
-    padding: 12px;
-    font-size: 16px;
 }
 
-.container{
-    margin-top: 10%;
-    margin-bottom: 10%;
+.table {
+    box-shadow: 0 0 10px rgba(0, 0,0,0.1);
+    border-collapse: separate;
+    font-family: 'Quicksand, sans-serif';
+    overflow: hidden;
+    font-weight: bold;
     width: 70%;
+
 }
 
-.table{
-    width: 100%;
-    justify-content: center;
+.table thead th {
+    background: rgb(20, 20, 20);
+    color: white;
+}
+
+.table td,.table th {
+    padding: 10px 20px;
     text-align: center;
-    font-size: 16px;
-    border-width: 10px;
 }
-.thead-dark{
-    background-color: #343A40;
+
+.table tbody tr:nth-of-type(even) {
+    background: #eeeeee;
 }
-th{
-    padding: 12px;
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(10, 216, 243);
 }
-td{
-    padding: 12px;
+
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+
+button {
+    background: none;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.page-btn {
+    background: #ddd;
+    color: #2c303a;
+    height: 35px;
+    border-radius: 2px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: background 0.3s ease;
+}
+
+.page-btn:not([class$="-page"]) {
+    width: 35px;
+}
+
+.page-btn[class$="-page"] {
+    background: #ccc;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.page-btn.active{
+    background: #717790;
+    color: #fff;
+
+}
+
+.page-btn[disabled] {
+    opacity: 0.3;
 }

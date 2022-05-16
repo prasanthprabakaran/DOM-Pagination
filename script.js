@@ -72,3 +72,40 @@ function result(res){
         
 }
 
+// Creating pagiantion buttons in DOM
+
+let pagesDiv = document.createElement("div");
+pagesDiv.classList.add("pagination-buttons","d-flex","justify-content-center");
+pagesDiv.id="buttons";
+
+let start = createPageElem2("page-btn","start-page","start");
+let prev = createPageElem2("page-btn","prev-page","prev");
+let btn1 = createPageElem2("page-btn","active","1");
+let btn2 = createPageElem1("page-btn","2");
+let btn3 = createPageElem1("page-btn","3");
+let btn4 = createPageElem1("page-btn","4");
+let btn5 = createPageElem1("page-btn","5");
+let btn6 = createPageElem1("page-btn","6");
+let btn7 = createPageElem1("page-btn","7");
+let btn8 = createPageElem1("page-btn","8");
+let btn9 = createPageElem1("page-btn","9");
+let next = createPageElem2("page-btn","next-page","next");
+let end = createPageElem2("page-btn","end-page","end");
+
+function createPageElem1(class1,value) {
+    let btn = document.createElement("button");
+    btn.type="button";
+    btn.className=class1;
+    btn.innerHTML=value
+    return btn;
+}
+function createPageElem2(class1,class2,value) {
+    let btn = document.createElement("button");
+    btn.type="button";
+    btn.classList.add(class1,class2);
+    btn.innerHTML=value
+    return btn;
+}
+
+pagesDiv.append(start,prev,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,next,end);
+document.body.append(pagesDiv);
