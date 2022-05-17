@@ -84,3 +84,7 @@ button {
 .page-btn[disabled] {
     opacity: 0.3;
 }
+
+.container {
+    margin-bottom: 5%;
+}
